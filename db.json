@@ -1,0 +1,53 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Burguer",
+        "price": 12,
+        "category": "Lanche",
+		    "img_url": "https://i.ibb.co/fpVHnZL/hamburguer.png",
+        "description": "Description for product 1"
+      },
+      {
+        "id": 2,
+        "name": "X-Burguer",
+        "price": 18,
+        "category": "Lanche",
+		    "img_url": "https://i.ibb.co/djbw6LV/x-burgue.png",
+        "description": "Description for product 2"
+      },
+      {
+        "productId": 3,
+        "name": "Big Burguer",
+        "category": "Lanche",
+        "price": 18,
+        "img_url": "https://i.ibb.co/FYBKCwn/big-kenzie.png",
+        "description": "Description for product 1"
+      },
+      {
+        "productId": 4,
+        "name": "Fanta Guaraná",
+        "category": "Bebida",
+        "price": 7,
+		    "img_url": "https://i.ibb.co/cCjqmPM/fanta-guarana.png",
+        "description": "Description for product 1"
+      },
+      {
+        "productId": 5,
+        "name": "Coca-cola",
+        "category": "Bebida",
+        "price": 4.99,
+        "img_url": "https://i.ibb.co/fxCGP7k/coca-cola.png",
+        "description": "Description for product 1"
+      },
+      {
+        "productId": 6,
+        "name": "McShake Ovomaltine",
+        "category": "Sobremesa",
+        "price": 4.99,
+        "img_url": "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
+        "description": "Description for product 1"
+      }
+    ]
+}
+  
