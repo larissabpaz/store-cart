@@ -14,8 +14,8 @@ export default function ProductDetails ({ name, price, description, imageUrl }: 
       <Box display="flex" justifyContent="center" marginBottom={2}>
         <img src={imageUrl} alt={name} style={{ width: '100%', maxWidth: '300px', height: 'auto' }} />
       </Box>
-      <Typography variant="body2" paragraph>{description}</Typography>
-      <Typography variant="h6">R${price.toFixed(2)}</Typography>
+      <Typography variant="body2">{description}</Typography>
+      <Typography variant="h6">R$ {price.toFixed(2)}</Typography>
     </Box>
   );
 };

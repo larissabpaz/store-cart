@@ -13,7 +13,7 @@ export default function OrderConfirmation() {
       <Typography variant="h4" gutterBottom>
         Pedido Confirmado!
       </Typography>
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" >
         Seu pedido foi realizado com sucesso. Em breve você receberá a confirmação no seu e-mail.
       </Typography>
       <Button 

@@ -44,8 +44,16 @@
         "productId": 6,
         "name": "McShake Ovomaltine",
         "category": "Sobremesa",
-        "price": 4.99,
+        "price": 13.90,
         "img_url": "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
+        "description": "Description for product 1"
+      },
+      {
+        "productId": 7,
+        "name": "Cheddar Burguer",
+        "category": "Lanche",
+        "price": 15.90,
+        "img_url": "https://d3sn2rlrwxy0ce.cloudfront.net/cheddar_dp_crispy.png?mtime=20231129102105&focal=none",
         "description": "Description for product 1"
       }
     ]

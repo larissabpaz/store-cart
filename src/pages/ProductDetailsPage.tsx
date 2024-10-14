@@ -54,7 +54,7 @@ export default function ProductDetailsPage() {
       <Box display="flex" justifyContent="center" marginBottom={2}>
         <img src={product.img_url} alt={product.name} style={{ width: '300px', height: '300px' }} />
       </Box>
-      <Typography variant="body1" paragraph>{product.description}</Typography>
+      <Typography variant="body1">{product.description}</Typography>
       <Typography variant="h5">R${product.price.toFixed(2)}</Typography>
 
       <TextField
