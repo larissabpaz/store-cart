@@ -11,7 +11,7 @@ type Product = {
 interface CartContextProps {
   cart: Product[];
   addToCart: (product: Product) => void;
-  removeFromCart: (id: number) => void;
+  removeFromCart: (id: number, quantity?: number) => void;
   clearCart: () => void;
   total: number;
 }
@@ -28,11 +28,31 @@ export function CartShopProvider({ children }: any) {
   const [cart, setCart] = useState<Product[]>([]);
 
   const addToCart = (product: Product) => {
-    setCart(prev => [...prev, product]);
+    setCart(prev => {
+      const existingProduct = prev.find(item => item.id === product.id);
+      if (existingProduct) {
+        return prev.map(item =>
+          item.id === product.id ? { ...item, quantity: item.quantity + product.quantity } : item
+        );
+      }
+      return [...prev, product];
+    });
   };
 
-  const removeFromCart = (id: number) => {
-    setCart(prev => prev.filter(item => item.id !== id));
+  const removeFromCart = (id: number, quantity: number = 1) => {
+    setCart(prev => {
+      const product = prev.find(item => item.id === id);
+      if (product) {
+        if (product.quantity > quantity) {
+          return prev.map(item =>
+            item.id === id ? { ...item, quantity: item.quantity - quantity } : item
+          );
+        } else {
+          return prev.filter(item => item.id !== id);
+        }
+      }
+      return prev;
+    });
   };
 
   const clearCart = () => {

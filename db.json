@@ -6,7 +6,7 @@
         "price": 12,
         "category": "Lanche",
 		    "img_url": "https://i.ibb.co/fpVHnZL/hamburguer.png",
-        "description": "Description for product 1"
+        "description": "Pão com gergelim, carne de frango empanado, alface, cheddar e tomate"
       },
       {
         "id": 2,
@@ -14,39 +14,15 @@
         "price": 18,
         "category": "Lanche",
 		    "img_url": "https://i.ibb.co/djbw6LV/x-burgue.png",
-        "description": "Description for product 2"
+        "description": "Pão com gergelim, carne de boi, alface, picles, cebola, cheddar e tomate"
       },
       {
         "productId": 3,
-        "name": "Big Burguer",
+        "name": "Duplo Burguer",
         "category": "Lanche",
         "price": 18,
         "img_url": "https://i.ibb.co/FYBKCwn/big-kenzie.png",
-        "description": "Description for product 1"
-      },
-      {
-        "productId": 4,
-        "name": "Fanta Guaraná",
-        "category": "Bebida",
-        "price": 7,
-		    "img_url": "https://i.ibb.co/cCjqmPM/fanta-guarana.png",
-        "description": "Description for product 1"
-      },
-      {
-        "productId": 5,
-        "name": "Coca-cola",
-        "category": "Bebida",
-        "price": 4.99,
-        "img_url": "https://i.ibb.co/fxCGP7k/coca-cola.png",
-        "description": "Description for product 1"
-      },
-      {
-        "productId": 6,
-        "name": "McShake Ovomaltine",
-        "category": "Sobremesa",
-        "price": 13.90,
-        "img_url": "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
-        "description": "Description for product 1"
+        "description": "Pão com gergelim, 2 carnes de boi, alface, picles, cebola, 2x de cheddar e tomate"
       },
       {
         "productId": 7,
@@ -54,7 +30,39 @@
         "category": "Lanche",
         "price": 15.90,
         "img_url": "https://d3sn2rlrwxy0ce.cloudfront.net/cheddar_dp_crispy.png?mtime=20231129102105&focal=none",
-        "description": "Description for product 1"
+        "description": "Pão com gergelim, 2 carnes de boi, alface, picles, cebola, 2x de cheddar, cebola caramelizada e tomate"
+      },
+      {
+        "productId": 4,
+        "name": "Fanta Guaraná",
+        "category": "Bebida",
+        "price": 7,
+		    "img_url": "https://i.ibb.co/cCjqmPM/fanta-guarana.png",
+        "description": "Refrigerante Fanta sabor guaraná"
+      },
+      {
+        "productId": 5,
+        "name": "Coca-cola",
+        "category": "Bebida",
+        "price": 4.99,
+        "img_url": "https://i.ibb.co/fxCGP7k/coca-cola.png",
+        "description": "Refrigerante Coca-cola"
+      },
+      {
+        "productId": 6,
+        "name": "McShake Ovomaltine",
+        "category": "Sobremesa",
+        "price": 13.90,
+        "img_url": "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
+        "description": "massa sabor baunilha e ovomaltine"
+      },
+      {
+        "productId": 7,
+        "name": "Casquinha com doce de leite",
+        "category": "Sobremesa",
+        "price": 5.40,
+        "img_url": "https://d3sn2rlrwxy0ce.cloudfront.net/Casquinha-Doce-de-Leite-thumb.png?mtime=20210916162028&focal=none",
+        "description": "Casquinha de sorvete, sabor doce de leite"
       }
     ]
 }

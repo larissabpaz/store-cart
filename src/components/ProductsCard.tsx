@@ -1,9 +1,6 @@
-import { useState } from 'react';
-import { styled } from '@mui/material/styles';
-import { Card, CardHeader, CardMedia, IconButton, Collapse, CardContent, Typography, Box } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { IconButtonProps } from '@mui/material/IconButton';
-//import { Link } from 'react-router-dom';
+import { Box, Card, CardHeader, CardMedia, IconButton, Tooltip } from '@mui/material';
+import { useCart } from '../context/CartShopContext';
+import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
 
 interface ProductsCardProps {
   id: number;
@@ -11,63 +8,42 @@ interface ProductsCardProps {
   price: number;
   img_url: string;
   description: string;
+  onClick: () => void;
 }
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
+export default function ProductsCard({ id, name, price, img_url, onClick }: ProductsCardProps) {
+  const { addToCart } = useCart();  
 
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  marginLeft: 'auto',
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
-
-export default function ProductsCard({ id, name, price, img_url, description }: ProductsCardProps) {
-  const [expanded, setExpanded] = useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const handleAddToCart = () => {
+    const product = { id, name, price, quantity: 1 };  
+    addToCart(product);  
   };
 
   return (
     <Box display="flex" gap={2} justifyContent="flex-start" flexWrap="wrap">
-    <Card sx={{ maxWidth: 200, margin: '2%', display: 'flex', flexDirection: 'column' }}>
-      <CardMedia
-        component="img"
-        height="194"
-        image={img_url}
-        alt={name}
-      />
-      <CardHeader
-        title={name}
-        subheader={`R$ ${price}`}
-        action={
-          <ExpandMore
-            expand={expanded}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="mostrar mais"
-          >
-            <ExpandMoreIcon />
-          </ExpandMore>
-        }
-      />
-      
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography variant="body2">{description}</Typography>
-          {/* <Link to={`${img_url}`}>Ver Detalhes</Link> */}
-        </CardContent>
-      </Collapse>
-    </Card>
+      <Card 
+      key={id}
+      sx={{ width: 250, position: 'relative', padding: '1rem', margin: "5%" }}
+      onClick={onClick}   
+      >
+        <CardMedia
+          component="img"
+          height="194"
+          image={img_url}
+          alt={name}
+        />
+        <CardHeader
+          title={name}
+          subheader={`R$ ${price}`}
+          action={
+            <Tooltip title="Adicionar ao Carrinho">
+            <IconButton color="primary" onClick={handleAddToCart}>
+            <AddShoppingCartSharpIcon />
+            </IconButton>
+            </Tooltip>
+          }
+        />
+      </Card>
     </Box>
   );
 }
-
-

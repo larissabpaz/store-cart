@@ -15,9 +15,9 @@ export default function CartShopPage() {
   
     return (
       <Box padding={2}>
-        <CartShop />
+        <CartShop /> 
         <Typography variant="h5" align="right" gutterBottom>
-          Total Geral: R${total.toFixed(2)}
+          Total da compra: R${total.toFixed(2)}
         </Typography>
         <Box display="flex" justifyContent="flex-end">
           <Button
